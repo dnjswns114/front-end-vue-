@@ -1,0 +1,218 @@
+openapi: 3.0.3
+info:
+  title: back-end-all-api
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: http://localhost
+paths:
+  /board/list:
+    get:
+      tags:
+        - board
+      summary: http://localhost/board/list
+      description: http://localhost/board/list
+      operationId: httpLocalhostBoardList
+      parameters:
+        - name: pageNo
+          in: query
+          schema:
+            type: string
+            example: '1'
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+  /board/read/{bno}:
+    get:
+      tags:
+        - board
+      summary: http://localhost/board/read/:bno?caller=list
+      description: http://localhost/board/read/:bno?caller=list
+      operationId: httpLocalhostBoardReadBnoCallerList
+      parameters:
+        - name: caller
+          in: query
+          schema:
+            type: string
+            example: list
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+    parameters:
+      - name: bno
+        in: path
+        required: true
+        schema:
+          type: string
+          example: '25'
+  /board/create:
+    post:
+      tags:
+        - board
+      summary: http://localhost/board/create
+      description: http://localhost/board/create
+      operationId: httpLocalhostBoardCreate
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                battach:
+                  type: string
+                  format: binary
+                bcontent:
+                  type: string
+                  example: '내용입니다. '
+                btitle:
+                  type: string
+                  example: 게시물 제목
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+  /board/update:
+    put:
+      tags:
+        - board
+      summary: http://localhost/board/update
+      description: http://localhost/board/update
+      operationId: httpLocalhostBoardUpdate
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                battach:
+                  type: string
+                  format: binary
+                bcontent:
+                  type: string
+                  example: 내용26
+                bno:
+                  type: string
+                  example: '26'
+                btitle:
+                  type: string
+                  example: 제목26
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+  /board/delete/{bno}:
+    delete:
+      tags:
+        - board
+      summary: http://localhost/board/delete/:bno
+      description: http://localhost/board/delete/:bno
+      operationId: httpLocalhostBoardDeleteBno
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+    parameters:
+      - name: bno
+        in: path
+        required: true
+        schema:
+          type: string
+          example: '26'
+  /board/battach/{bno}:
+    get:
+      tags:
+        - board
+      summary: http://localhost/board/battach/:bno
+      description: http://localhost/board/battach/:bno
+      operationId: httpLocalhostBoardBattachBno
+      responses:
+        '200':
+          description: ''
+      security:
+        - bearerAuth: []
+    parameters:
+      - name: bno
+        in: path
+        required: true
+        schema:
+          type: string
+          example: ''
+  /member/login:
+    post:
+      tags:
+        - member
+      summary: http://localhost/member/login
+      description: http://localhost/member/login
+      operationId: httpLocalhostMemberLogin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mid:
+                  type: string
+                  example: user
+                mpassword:
+                  type: string
+                  example: '12345'
+            examples:
+              http://localhost/member/login:
+                value:
+                  mid: user
+                  mpassword: '12345'
+      responses:
+        '200':
+          description: ''
+      security:
+        - {}
+  /member/join:
+    post:
+      tags:
+        - member
+      summary: http://localhost/member/join
+      description: http://localhost/member/join
+      operationId: httpLocalhostMemberJoin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                memail:
+                  type: string
+                  example: user1@naver.com
+                mid:
+                  type: string
+                  example: user1
+                mname:
+                  type: string
+                  example: 사용자1
+                mpassword:
+                  type: string
+                  example: Ab123
+            examples:
+              http://localhost/member/join:
+                value:
+                  memail: user1@naver.com
+                  mid: user1
+                  mname: 사용자1
+                  mpassword: Ab123
+      responses:
+        '200':
+          description: ''
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags:
+  - name: board
+  - name: member

@@ -1,0 +1,34 @@
+{
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Spring Boot-BackEndServiceApplication<back-end-all-api>",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "mainClass": "com.mycompany.backendservice.BackEndServiceApplication",
+        "projectName": "back-end-all-api",
+        "args": "",
+        "envFile": "${workspaceFolder}/.env"
+      },
+      {
+        "type": "java",
+        "name": "Spring Boot-BackEndServiceApplication<back-end-all-api-back-end-all-api-with-swagger-v2>",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "mainClass": "com.mycompany.backendservice.BackEndServiceApplication",
+        "projectName": "back-end-all-api-back-end-all-api-with-swagger-v2",
+        "args": "",
+        "envFile": "${workspaceFolder}/.env"
+      },
+      {
+        "type": "java",
+        "name": "Spring Boot-BackEndServiceApplication<back-end-all-api-back-end-all-api-v2>",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "mainClass": "com.mycompany.backendservice.BackEndServiceApplication",
+        "projectName": "back-end-all-api-back-end-all-api-v2",
+        "args": "",
+        "envFile": "${workspaceFolder}/.env"
+      }
+    ]
+}

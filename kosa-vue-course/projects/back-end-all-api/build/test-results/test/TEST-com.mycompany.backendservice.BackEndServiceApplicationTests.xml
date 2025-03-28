@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mycompany.backendservice.BackEndServiceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-14T14:45:22" hostname="DESKTOP-WORK" time="0.998">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.mycompany.backendservice.BackEndServiceApplicationTests" time="0.998"/>
+  <system-out><![CDATA[23:45:19.577 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mycompany.backendservice.BackEndServiceApplicationTests]: BackEndServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:45:19.683 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mycompany.backendservice.BackEndServiceApplication for test class com.mycompany.backendservice.BackEndServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-14T23:45:20.095+09:00  INFO 40656 --- [back-end-service] [    Test worker] c.m.b.BackEndServiceApplicationTests     : Starting BackEndServiceApplicationTests using Java 17.0.10 with PID 40656 (started by blueskii in D:\Work\spring-docker-kubernetes\springboot\back-end-service)
+2025-01-14T23:45:20.096+09:00  INFO 40656 --- [back-end-service] [    Test worker] c.m.b.BackEndServiceApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-01-14T23:45:22.240+09:00  INFO 40656 --- [back-end-service] [    Test worker] c.m.b.BackEndServiceApplicationTests     : Started BackEndServiceApplicationTests in 2.421 seconds (process running for 3.601)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

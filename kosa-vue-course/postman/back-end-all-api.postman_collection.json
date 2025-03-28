@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "c7f718e8-37ef-43e8-96a9-5f1a0a0b9c21",
+		"name": "back-end-all-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13839523"
+	},
+	"item": [
+		{
+			"name": "board",
+			"item": [
+				{
+					"name": "http://localhost/board/list",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/board/list?pageNo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"board",
+								"list"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/board/read/:bno?caller=list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIiwiZXhwIjoxNzQyMDg5NzQwfQ.ecUzHRCPBLA7JrdrCbe75CrF5CVtanXqvAjLp7y9wAI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/board/read/:bno?caller=list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"board",
+								"read",
+								":bno"
+							],
+							"query": [
+								{
+									"key": "caller",
+									"value": "list"
+								}
+							],
+							"variable": [
+								{
+									"key": "bno",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/board/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIiwiZXhwIjoxNzQxODE5NDA0fQ.gdDLpzI5umnZllJZc6ycgMsiUEYnoAwR1njUKQoWm1A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "btitle",
+									"value": "게시물 제목",
+									"type": "text"
+								},
+								{
+									"key": "bcontent",
+									"value": "내용입니다. ",
+									"type": "text"
+								},
+								{
+									"key": "battach",
+									"type": "file",
+									"src": "/C:/Users/blueskii/Pictures/앱 이미지/photo1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/board/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"board",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/board/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIiwiZXhwIjoxNzQyMDg5NzQwfQ.ecUzHRCPBLA7JrdrCbe75CrF5CVtanXqvAjLp7y9wAI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bno",
+									"value": "26",
+									"type": "text"
+								},
+								{
+									"key": "btitle",
+									"value": "제목26",
+									"type": "text"
+								},
+								{
+									"key": "bcontent",
+									"value": "내용26",
+									"type": "text"
+								},
+								{
+									"key": "battach",
+									"type": "file",
+									"src": "/C:/Users/blueskii/Pictures/앱 이미지/photo2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/board/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"board",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/board/delete/:bno",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIiwiZXhwIjoxNzQyMDg5NzQwfQ.ecUzHRCPBLA7JrdrCbe75CrF5CVtanXqvAjLp7y9wAI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/board/delete/:bno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"board",
+								"delete",
+								":bno"
+							],
+							"variable": [
+								{
+									"key": "bno",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/board/battach/:bno",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIiwiZXhwIjoxNzM5NjIwMzc5fQ.SZgMbCqU0xinXOTT-EAmAfxeYcTdQi923YxiOs_EHNU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/board/battach/:bno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"board",
+								"battach",
+								":bno"
+							],
+							"variable": [
+								{
+									"key": "bno",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "member",
+			"item": [
+				{
+					"name": "http://localhost/member/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mid\": \"user\",\r\n    \"mpassword\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/member/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"member",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/member/join",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mid\": \"user1\",\r\n    \"mname\": \"사용자1\",\r\n    \"mpassword\": \"Ab123\",\r\n    \"memail\":\"user1@naver.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/member/join",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"member",
+								"join"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
